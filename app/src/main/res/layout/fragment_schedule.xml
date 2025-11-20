@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f5f5f5">
+
+    <!-- 1. 表头区域（时间列空位 + 星期列） -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        android:elevation="2dp"> <!-- 加阴影区分表头和内容区 -->
+
+        <!-- 时间列空位（宽度与Java代码中 TIME_COLUMN_WIDTH 一致，这里是200px） -->
+        <View
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="#fafafa" /> <!-- 浅灰色背景区分时间列 -->
+
+        <!-- 星期表头（6列，与课程卡片宽度自动对齐） -->
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="M"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="#333333" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="T"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="#333333" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="W"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="#333333" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="R"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="#333333" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="F"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="#333333" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="S"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="#333333" />
+    </LinearLayout>
+
+    <!-- 2. 课程表主内容区（RecyclerView） -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/timetable_recycler"
+        android:layout_width="match_parent"
+
+        android:clipChildren="false"
+        android:clipToPadding="false"
+
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- 3. 添加课程按钮（固定在底部） -->
+    <Button
+        android:id="@+id/add_course_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Course"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="12dp"
+        android:textSize="16sp"
+        android:backgroundTint="#2196F3"
+        android:textColor="#ffffff" />
+
+</LinearLayout>

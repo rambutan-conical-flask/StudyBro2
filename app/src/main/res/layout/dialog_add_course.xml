@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- 课程名称 -->
+    <EditText
+        android:id="@+id/et_course_name"
+        android:hint="课程名称"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- 教室 -->
+    <EditText
+        android:id="@+id/et_course_room"
+        android:hint="教室"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- 星期几下拉 -->
+    <Spinner
+        android:id="@+id/spinner_day"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- 开始时间下拉 -->
+    <Spinner
+        android:id="@+id/spinner_start_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- 结束时间下拉 -->
+    <Spinner
+        android:id="@+id/spinner_end_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
