@@ -46,4 +46,12 @@ dependencies {
     implementation ("androidx.room:room-runtime:2.5.2")
     annotationProcessor ("androidx.room:room-compiler:2.5.2")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
+    // 添加 Retrofit 相关依赖
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+
+    // 添加 Gson 依赖（用于 JSON 解析）
+    implementation("com.google.code.gson:gson:2.10.1")
 }

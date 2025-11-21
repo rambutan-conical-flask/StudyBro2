@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initViews();
         setClickListeners();
         updateTimeAndDate();
+
+
     }
 
     private void initViews() {
@@ -103,7 +105,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (id == R.id.layout_home) {
             showToast("Home clicked");
         } else if (id == R.id.layout_ai) {
-            showToast("AI clicked");
+            Intent intent = new Intent(MainActivity.this, AIChatActivity.class);
+            startActivity(intent);
         } else if (id == R.id.layout_account) {
             showToast("Account clicked");
         }

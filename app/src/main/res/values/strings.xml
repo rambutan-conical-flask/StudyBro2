@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">StudyBro！</string>
+    <string name="ai_chat_hint">输入消息...</string>
+    <string name="ai_chat_send">发送</string>
 </resources>
