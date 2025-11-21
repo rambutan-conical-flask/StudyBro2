@@ -73,7 +73,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(MainActivity.this, ScheduleActivity.class);
             startActivity(intent);
 
-
         } else if (id == R.id.layout_task) {
             // 任务盲盒
             Intent intent = new Intent(MainActivity.this, TaskBoxActivity.class);
@@ -89,13 +88,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(MainActivity.this, TodoActivity.class);
             startActivity(intent);
 
-
-        }
-        else if (id == R.id.layout_countdown) {
+        } else if (id == R.id.layout_countdown) {
             // 启动计时器Activity
             Intent intent = new Intent(MainActivity.this, TimerActivity.class);
             startActivity(intent);
-        }else if (id == R.id.layout_home) {
+        } else if (id == R.id.layout_home) {
             showToast("Home clicked");
         } else if (id == R.id.layout_ai) {
             showToast("AI clicked");
