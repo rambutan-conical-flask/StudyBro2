@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView tvTime;
     private TextView tvDate;
     private LinearLayout layoutCourse, layoutTask, layoutLedger, layoutTodo, layoutCountdown,layoutDiary;
-    private LinearLayout layoutHome, layoutAi, layoutAccount;
+    private LinearLayout layoutHome, layoutAi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         layoutHome = findViewById(R.id.layout_home);
         layoutAi = findViewById(R.id.layout_ai);
-        layoutAccount = findViewById(R.id.layout_account);
+//        layoutAccount = findViewById(R.id.layout_account);
         layoutDiary = findViewById(R.id.layout_diary);
 
     }
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         layoutCountdown.setOnClickListener(this);
         layoutHome.setOnClickListener(this);
         layoutAi.setOnClickListener(this);
-        layoutAccount.setOnClickListener(this);
+//        layoutAccount.setOnClickListener(this);
         layoutDiary.setOnClickListener(this);
 
     }
@@ -107,9 +107,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (id == R.id.layout_ai) {
             Intent intent = new Intent(MainActivity.this, AIChatActivity.class);
             startActivity(intent);
-        } else if (id == R.id.layout_account) {
-            showToast("Account clicked");
         }
+//        else if (id == R.id.layout_account) {
+//            showToast("Account clicked");
+//        }
     }
 
     private void showToast(String message) {
