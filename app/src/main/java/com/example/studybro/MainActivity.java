@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private TextView tvTime;
     private TextView tvDate;
-    private LinearLayout layoutCourse, layoutTask, layoutLedger, layoutTodo, layoutCountdown;
+    private LinearLayout layoutCourse, layoutTask, layoutLedger, layoutTodo, layoutCountdown,layoutDiary;
     private LinearLayout layoutHome, layoutAi, layoutAccount;
 
     @Override
@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         layoutHome = findViewById(R.id.layout_home);
         layoutAi = findViewById(R.id.layout_ai);
         layoutAccount = findViewById(R.id.layout_account);
+        layoutDiary = findViewById(R.id.layout_diary);
+
     }
 
     private void setClickListeners() {
@@ -51,6 +53,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         layoutHome.setOnClickListener(this);
         layoutAi.setOnClickListener(this);
         layoutAccount.setOnClickListener(this);
+        layoutDiary.setOnClickListener(this);
+
     }
 
     private void updateTimeAndDate() {
@@ -91,6 +95,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (id == R.id.layout_countdown) {
             // 启动计时器Activity
             Intent intent = new Intent(MainActivity.this, TimerActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.layout_diary) {
+            // 启动日记Activity
+            Intent intent = new Intent(MainActivity.this, SelectMoodActivity.class);
             startActivity(intent);
         } else if (id == R.id.layout_home) {
             showToast("Home clicked");

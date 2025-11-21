@@ -45,4 +45,5 @@ dependencies {
     implementation("androidx.recyclerview:recyclerview:1.3.1")
     implementation ("androidx.room:room-runtime:2.5.2")
     annotationProcessor ("androidx.room:room-compiler:2.5.2")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
 }

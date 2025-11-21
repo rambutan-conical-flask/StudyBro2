@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E1EBF3">
+
+    <!-- 显示选中的心情图片 -->
+    <ImageView
+        android:id="@+id/mood_image_view"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+    <!-- 记录心情的文本框 -->
+    <EditText
+        android:id="@+id/diary_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/mood_image_view"
+        android:hint="Record my current mood today..."
+        android:inputType="textMultiLine"
+        android:layout_margin="16dp"/>
+
+    <!-- 保存按钮 -->
+    <Button
+        android:id="@+id/buttonSaveDiary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SAVE"
+        android:layout_below="@id/diary_edit_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+</RelativeLayout>

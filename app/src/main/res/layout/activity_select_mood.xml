@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E1EBF3"> <!-- 设置淡黄色背景 -->
+
+    <!-- 顶部的文本：NOW, I’m feeling... -->
+    <TextView
+        android:id="@+id/feelingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NOW, I’m feeling..."
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+
+    <!-- 显示用户选中的大图片 -->
+    <ImageView
+        android:id="@+id/selected_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:scaleType="centerCrop" />
+
+    <!-- 显示十五张心情图片 -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selected_image"
+        android:layout_marginTop="40dp"
+        android:columnCount="5" > <!-- 设置列数为5 -->
+<!--        android:rowCount="3"  &lt;!&ndash; 设置行数为3 &ndash;&gt;-->
+<!--        android:padding="10dp">-->
+
+    <!-- 这些图片会被动态设置 -->
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="5dp"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="5dp"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/image3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="5dp"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/image4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="5dp"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/image5"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="5dp"
+        android:scaleType="centerCrop" />
+
+    <!-- 继续添加 image6 到 image15，每个 image 都通过 layout_below 放置 -->
+    <ImageView
+        android:id="@+id/image6"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="5dp"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/image7"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="5dp"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/image8"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="5dp"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/image9"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="5dp"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/image10"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="5dp"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/image11"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="5dp"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/image12"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="5dp"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/image13"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="5dp"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/image14"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="5dp"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/image15"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="5dp"
+        android:scaleType="centerCrop" />
+
+</GridLayout>
+
+    <!-- 跳转到记录页面的按钮 -->
+    <Button
+    android:id="@+id/buttonGoToDiary"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Write Diary"
+    android:layout_below="@id/gridLayout"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="40dp"
+    android:onClick="goToDiary" />
+
+    <Button
+        android:id="@+id/buttonGoToHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HISTORY"
+        android:layout_below="@id/gridLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:onClick="goToHistory" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Main Interface"
+        android:layout_below="@id/gridLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="160dp"
+        android:onClick="goToMainInterface" />
+
+
+</RelativeLayout>
